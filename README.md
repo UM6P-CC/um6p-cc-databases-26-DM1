@@ -54,5 +54,5 @@ These files are already in your repo, you can look at the data directly to under
 gh student submit
 ```
 
-You can submit multiple times — each submission is graded independently, and your most recent submission is what counts. Check the **Actions** tab after each submission to see your score and any failure details.
+You can submit multiple times, each submission is graded independently, and your most recent submission is what counts. Check the **Actions** tab after each submission to see your score and any failure details.
 
