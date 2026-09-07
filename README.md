@@ -30,14 +30,10 @@
   Write your SQL directly inside the triple quotes. Do not rename, delete, or restructure the surrounding test code ,only edit the SQL inside each block.
   
 
-## 3. Waiting for your repository to go public
-
-When you accept an assignment, your repository starts out private. A background process runs periodically and flips eligible lab repositories to public, this is required for grading to work correctly. This usually happens within about 15 minutes of accepting.
-
-Do not push your solution or run `gh student submit` until your repository shows as Public .
 
 
-## 4. Starting from Lab 3: how grading works
+
+## 3. Starting from Lab 3: how grading works
 
 From Lab 3 onward, each lab includes a schema and a populated dataset that your queries run against:
 - **Lab 3** → `seed.sql`
@@ -48,7 +44,7 @@ These files are already in your repo, you can look at the data directly to under
 **Important:** Your SQL is also tested using a hidden dataset. Therefore, write general SQL queries that solve the question. Do not write queries that only match the specific values in the visible dataset.
 
 
-## 5. Submitting
+## 4. Submitting
 
 ```
 gh student submit
