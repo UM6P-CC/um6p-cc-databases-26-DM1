@@ -4,12 +4,22 @@
 
 1. **Accept the assignment** using the link/command your instructor shares.
 2. **Clone your repository** to your own computer.
+3. **Run the tests on your computer** (recommended) so you can check your SQL before you submit. Follow [GETTING_STARTED.md](GETTING_STARTED.md). It starts from zero (Python, database, how to run tests). Skip any step you already have.
 4. **Write your answers** in the location specified for that lab (see below).
 5. Save your work then run:
    ```
    gh student submit
    ```
 6. Check the **Actions** tab of your repo to see your grading results.
+
+If Python and MySQL (`root` / `root` on port 3306) are already set up:
+
+```
+python3 -m pip install -r tests/requirements.txt
+python3 -m pytest tests/test_lab0.py -v
+```
+
+On Windows, use `py` instead of `python3`. Full commands for Mac and Windows are in [GETTING_STARTED.md](GETTING_STARTED.md).
 
 ## 2. Where to write your answers
 

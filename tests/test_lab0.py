@@ -1,15 +1,31 @@
+import os
+
 import pymysql
 import pytest
 
 
+def _mysql_connect():
+    return pymysql.connect(
+        host=os.environ.get("MYSQL_HOST", "127.0.0.1"),
+        user=os.environ.get("MYSQL_USER", "root"),
+        password=os.environ.get("MYSQL_PASSWORD", "root"),
+        port=int(os.environ.get("MYSQL_PORT", "3306")),
+        autocommit=True,
+    )
+
+
+@pytest.fixture(scope="session", autouse=True)
+def reset_database():
+    conn = _mysql_connect()
+    cur = conn.cursor()
+    cur.execute("DROP DATABASE IF EXISTS LibraryDB")
+    cur.close()
+    conn.close()
+
+
 @pytest.fixture
 def connection():
-    conn = pymysql.connect(
-        host="127.0.0.1",
-        user="root",
-        password="root",
-        autocommit=True
-    )
+    conn = _mysql_connect()
 
     yield conn
 
